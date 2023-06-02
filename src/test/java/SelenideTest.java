@@ -19,11 +19,11 @@ public class SelenideTest {
     @Test
     public void registrationCardTest() {
         open("http://localhost:9999/");
-        $("[placeholder='Город']").setValue("Самара");
+        $("[placeholder='Город']").setValue("Мурманск");
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
         $("[data-test-id='date'] input").setValue(generateDate(3, "dd.MM.yyyy"));
-        $("[name='name']").setValue("Семенова Анна Аркадьевна");
-        $("[name='phone']").setValue("+79256584856");
+        $("[name='name']").setValue("Иванов Иван Иванович");
+        $("[name='phone']").setValue("+79522773612");
         $("[data-test-id='agreement']").click();
         $$("[type='button']").find(Condition.exactText("Забронировать")).click();
         String planningDate = generateDate(3, "dd.MM.yyyy");
