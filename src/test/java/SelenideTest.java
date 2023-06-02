@@ -22,7 +22,7 @@ public class SelenideTest {
         $("[placeholder='Город']").setValue("Мурманск");
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
         $("[data-test-id='date'] input").setValue(generateDate(3, "dd.MM.yyyy"));
-        $("[name='name']").setValue("Иванов Иван Иванович");
+        $("[name='name']").setValue("Мартынова Екатерина Павловна");
         $("[name='phone']").setValue("+79522773612");
         $("[data-test-id='agreement']").click();
         $$("[type='button']").find(Condition.exactText("Забронировать")).click();
